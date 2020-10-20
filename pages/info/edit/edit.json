@@ -1,0 +1,16 @@
+{
+    "navigationBarTitleText": "个人信息",
+    "usingComponents": {
+      "wux-cell-group": "../../../dist/cell-group/index",
+      "wux-cell": "../../../dist/cell/index",
+      "wux-input": "../../../dist/input/index",
+      "wux-icon": "../../../dist/icon/index",
+      "wux-button": "../../../dist/button/index",
+      "van-popup": "../../../dist0/popup/index",
+      "wux-radio-group": "../../../dist/radio-group/index",
+      "wux-radio": "../../../dist/radio/index",
+      "van-picker": "../../../dist0/picker/index",
+      "van-toast": "../../../dist0/toast/index"
+    },
+    "disableScroll": true
+}

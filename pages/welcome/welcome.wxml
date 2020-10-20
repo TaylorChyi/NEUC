@@ -1,0 +1,25 @@
+<!--index.wxml-->
+
+<!--在屏幕上方设置的一个透明按钮，用以获得用户授权，待授权后按钮消失-->
+<button class='getUserinfo' wx:if="{{!hasUserInfo || !canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+
+<view class='container'>
+  <!--头像框-->
+  <view class="userinfo">
+    <!--在用户未授权时显示小程序图标-->
+    <block wx:if="{{!hasUserInfo || !canIUse}}">
+      <image  class="userinfo-avatar" src="/images/NEUC.png" mode="cover"></image>
+      <text class="userinfo-nickname">NEUC</text>
+    </block>
+    <!--用户授权后的头像-->
+    <block wx:else>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <!--进入NEUC按钮-->
+  <button class="usermotto" bindtap="bindViewTap" >
+    <text>{{motto}}</text>
+  </button>
+</view>

@@ -1,0 +1,68 @@
+<!--pages/moments/moments.wxml-->
+
+<!--搜索栏-->
+<view class='search-top' bindtap='toSearch'>
+</view>
+<!-- <view class='search-bottom'>
+  <wux-search-bar clear maxlength="8" />
+</view>
+<view class='fill'>↑上拉刷新↑</view> -->
+
+<!--发表按钮-->
+<image class='publish-button' src='/images/button/publish.png' bindtap='toPublish'/>
+
+<!--discussList是discuss页面上要展示的所有问题的列表；index是什么不用管；-->
+<!-- <view class='panel' wx:for="{{discussList}}" wx:key="{{index}}"> -->
+  <!--discussList中的一个Item，一条问答-->
+  <!-- <view class="item-panel" data-index='{{index}}' bindtap='toDetailDiscuss'> -->
+  <view class="item-panel">
+    <view class="left">
+      <image class='user-image' src="/images/NEUC.png"></image>
+    </view>
+    <view class="right">
+      <view class="user-nickname"><text>小秦</text></view>
+      <view class="user-content"><text>哈哈哈</text></view>
+    </view>
+  </view>
+
+  <view class="item-panel">
+    <view class="left">
+      <image class='user-image' src="/images/NEUC.png"></image>
+    </view>
+    <view class="right">
+      <view class="user-nickname"><text>小秦</text></view>
+      <view class="user-content"><text>哈哈哈</text></view>
+    </view>
+  </view>
+
+  <view class="item-panel">
+    <view class="left">
+      <image class='user-image' src="/images/NEUC.png"></image>
+    </view>
+    <view class="right">
+      <view class="user-nickname"><text>小秦</text></view>
+      <view class="user-content"><text>哈哈哈</text></view>
+    </view>
+  </view>
+
+  <view class="item-panel">
+    <view class="left">
+      <image class='user-image' src="/images/NEUC.png"></image>
+    </view>
+    <view class="right">
+      <view class="user-nickname"><text>小秦</text></view>
+      <view class="user-content"><text>哈哈哈</text></view>
+    </view>
+  </view>
+<!-- </view> -->
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+

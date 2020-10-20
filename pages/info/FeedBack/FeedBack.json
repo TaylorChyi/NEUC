@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "问题反馈",
+  "usingComponents": {
+    "wux-button": "../../../dist/button/index",
+    "van-panel": "../../../dist0/panel/index",
+    "van-radio": "../../../dist0/radio/index",
+    "van-radio-group": "../../../dist0/radio-group/index",
+    "van-cell": "../../../dist0/cell/index",
+    "van-cell-group": "../../../dist0/cell-group/index",
+    "van-field": "../../../dist0/field/index",
+    "van-toast": "../../../dist0/toast/index",
+    "wux-textarea": "../../../dist/textarea/index"
+  },
+  "disableScroll": true
+}

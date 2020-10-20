@@ -1,0 +1,47 @@
+<!--pages/search/search.wxml-->
+<wux-search-bar clear maxlength="8" focus bind:confirm="search" bind:clear="Cancel" bind:Cancel="Cancel"/>
+
+
+<!--discussList是discuss页面上要展示的所有问题的列表；index是什么不用管；-->
+<view wx:if="{{questionList.length > 0}}">
+  <view class='panel' wx:for="{{questionList}}" wx:key="{{index}}">
+    <!--discussList中的一个Item，一条问答-->
+    <view class="item-panel" data-index='{{index}}' bindtap='toDetailDiscuss'>
+      <view class='title'>
+        <text>{{item.title}}</text>
+      </view>
+
+      <view class='content'>
+        <text>{{item.content}}</text>
+      </view>
+
+      <view class='bottom'>
+        <view class='container'>
+          <!--发表者的头像-->
+          <image class='user-image' src="{{item.image}}"></image>
+          <!--发表者的昵称-->
+          <view class='user-name'>{{item.name}}</view>
+
+          <!--发表内容的标签-->
+          <view class='tag'>{{item.tag}}</view>
+          <!--发表时间-->
+          <view class='time'>
+            <wux-timeago to="{{ item.date }}" lang="zh_CN" />
+          </view>
+          <!--发表后得到的回复-->
+          <view class='answer'>
+            回复({{item.commentList.length}})
+          </view>
+        </view>
+        <!--发表问题的价值积分-->
+        <view class='coin'>
+          {{item.coin}}分
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="empty" wx:if="{{questionList.length == 0}}">
+  <image src='/images/empty.png'></image>
+  <text>空空如也</text>
+</view>

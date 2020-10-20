@@ -1,0 +1,41 @@
+<!--pages/MySource/MySource.wxml-->
+<view class="page">
+  <!--顶部导航栏-->
+  <view class="navigation" >
+    <wux-tabs defaultCurrent="tab1" bind:change="onChange">
+        <wux-tab key="0" title="已收藏"></wux-tab>
+        <wux-tab key="1" title="已下载"></wux-tab>
+    </wux-tabs>
+  </view>
+  <!--滑动窗口-->
+  <scroll-view scroll-y="true" class='window'>
+  <!--已收藏页面-->
+    <view  hidden="{{currentTab!=0}}" >
+      <view wx:for="{{CollectList}}" wx:key="{{index}}">
+        <wux-wing-blank size="default">
+          <wux-card title="{{item.title}}" extra="{{item.extra}}">
+              <view slot="body">
+              <text>{{item.content}}</text>
+              <image class="picture" src="{{item.picture}}" ></image>
+              </view>
+              <view slot="footer">{{item.time}}</view>
+          </wux-card>
+        </wux-wing-blank>
+      </view>
+    </view>
+   
+    <!--已下载页面-->
+    <view  hidden="{{currentTab!=1}}" >
+        <view wx:for="{{DownloadList}}" wx:key="{{index}}">
+          <van-card
+            tag="{{item.extra}}"
+            desc="{{item.content}}"
+            title="{{item.title}}"
+            thumb="{{item.picture}}">
+            <view slot="footer">{{item.time}}</view>
+          </van-card>
+        </view>  
+    </view>
+  </scroll-view>
+</view> 
+  

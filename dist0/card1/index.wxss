@@ -1,0 +1,19 @@
+@import '../common/index.wxss';
+.van-card{position:relative;padding:5rpx 15rpx;font-size:20rpx;color:#333;background-color:#fafafa;box-sizing:border-box}
+.van-card__header{display:-webkit-flex;display:flex}
+.van-card__header--center{-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center}
+.van-card__thumb{position:inherit;width:200rpx;height:200rpx;margin-right:10rpx;-webkit-flex:none;flex:none}
+.van-card__thumb:empty{display:none}
+.van-card__img{width:100%;height:100%}
+.van-card__content{position:relative;min-width:0;-webkit-flex:1;flex:1}
+.van-card__desc,
+.van-card__title{word-break:break-all}
+.van-card__title{font-size:30rpx;font-weight:700;line-height:16rpx}
+.van-card__desc{color:#7d7e80}
+.van-card__bottom,
+.van-card__desc{position:relative; padding-top:70rpx;line-height:30rpx;}
+.van-card__price{display:inline-block;font-weight:700;color:#f44}
+.van-card__origin-price{display:inline-block;margin-left:5rpx;font-size:10rpx;color:#7d7e80;text-decoration:line-through}
+.van-card__num{float:right}
+.van-card__tag{position:absolute;top:2rpx;left:0}
+.van-card__footer{width:100%;text-align:right;-webkit-flex:none;flex:none}

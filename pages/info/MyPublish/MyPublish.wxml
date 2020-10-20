@@ -1,0 +1,78 @@
+<!--pages/MyPublish/MyPublish.wxml-->
+<view class="page">
+  <!--顶部导航栏-->
+  <view class="navigation" >
+    <wux-tabs defaultCurrent="tab1" bind:change="onChange">
+        <wux-tab key="0" title="问答"></wux-tab>
+        <wux-tab key="1" title="资源"></wux-tab>
+    </wux-tabs>
+  </view>
+  <!--滑动窗口-->
+  <scroll-view scroll-y="true" class='window'>
+  <!--问答页面-->
+  <view  wx:if="{{currentTab==0}}" >
+    <view class="empty" wx:if="{{discussList.length == 0}}">
+      <image src='/images/empty.png'></image>
+        <text>空空如也</text>
+    </view>
+    <!--discussList是discuss页面上要展示的所有问题的列表；index是什么不用管；-->
+    <view class='panel' wx:for="{{discussList}}" wx:key="{{index}}" wx:if="{{discussList.length > 0}}">
+      <wux-swipe-action autoClose right="{{ right }}" bind:click="onClick_discuss" id="{{index}}" bind:open="transmit_id">
+        <!--discussList中的一个Item，一条问答-->
+        <view class="item-panel">
+          <view class='title'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='bottom'>
+            <view class='user'>
+              <!--发表内容的标签-->
+              <view class='tag'><text space="nbsp"> {{item.course}} </text></view>
+              <!--发表后得到的回复-->
+              <view class='answer'>
+                帖子（{{item.commentList.length}}）
+              </view>
+            </view>
+            <!--发表时间-->
+            <view class='time'>
+              {{item.date}}
+            </view>
+
+          </view>
+        </view>
+      </wux-swipe-action>
+    </view>
+  </view>
+   
+    <!--资源页面-->
+    <view  wx:if="{{currentTab==1}}" >
+      <view class="empty" wx:if="{{resourceList.length == 0}}">
+          <image src='/images/empty.png'></image>
+            <text>空空如也</text>
+      </view>
+      <view class="panel" wx:for="{{ resourceList }}" wx:key="{{index}}" wx:if="{{resourceList.length > 0}}">
+        <wux-swipe-action autoClose right="{{ right }}" bind:click="onClick_resource" id="{{index}}" bind:open="transmit_id">
+            <view class='resourceItem' data-index="{{index}}" bindtap="toDetailResource">
+              <view class='topC'>
+                <image class='fileImage' src='/images/file/{{item.fileList[0].postfix}}.png'></image>
+                <view class='filetitle'>{{item.title}}</view>
+              </view>
+              <view class='midC'>
+                <view class='filecontent'>{{item.content}}</view>
+              </view>
+              <view class='bottomC'>
+                <!--发表内容的标签-->
+                <view class='user'>
+                  <view class='tag'><text space="nbsp"> {{item.course}} </text></view>
+                  <view class='answer'>
+                   帖子（{{item.commentList.length}}）
+                  </view>
+                </view>
+                <view class='filetime'>{{item.date}}</view>
+              </view>
+            </view>
+        </wux-swipe-action> 
+      </view>
+    </view>
+  </scroll-view>
+</view>
+

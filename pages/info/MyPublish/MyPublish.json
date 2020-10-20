@@ -1,0 +1,19 @@
+{
+  "navigationBarTitleText": "我的发表",
+  "usingComponents": {
+    "wux-tabs": "../../../dist/tabs/index",
+    "wux-tab": "../../../dist/tab/index",
+    "wux-badge": "../../../dist/badge/index",
+    "wux-card": "../../../dist/card/index",
+    "wux-wing-blank": "../../../dist/wing-blank/index",
+    "van-card": "../../../dist0/card/index",
+    "wux-swipe-action-group": "../../../dist/swipe-action-group/index",
+    "wux-swipe-action": "../../../dist/swipe-action/index",
+    "wux-cell-group": "../../../dist/cell-group/index",
+    "wux-cell": "../../../dist/cell/index",
+    "wux-icon": "../../../dist/icon/index",
+    "van-swipe-cell": "../../../dist0/swipe-cell/index",
+    "van-cell": "../../../dist0//cell/index",
+    "van-cell-group": "../../../dist0//cell-group/index"
+  }
+}

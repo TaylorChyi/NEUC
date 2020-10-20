@@ -1,0 +1,57 @@
+<!--pages/resource/publish/publish.wxml-->
+<!--暂定最大长度为20 以及 灰字为标题-->
+<wux-toast id="wux-toast" />
+<wux-cell-group>
+  <wux-cell hover-class="none">
+    <wux-input value="{{title}}" controlled="true" label="标题" placeholder="请输入您的标题..." bind:change="onTitle"/>
+  </wux-cell>
+</wux-cell-group>
+<!--暂定最大长度为300 以及 灰字为内容(至少10个字)-->
+<wux-cell-group title="内容">
+  <wux-cell hover-class="none">
+    <wux-textarea value="{{content}}" controlled="true" hasCount rows="6" cursorSpacing="80" maxlength="400" placeholder="请输入内容..." bind:change="onContent"/>
+  </wux-cell>
+</wux-cell-group>
+<!--设计问题 如何写文字的同时插入图片以及之后如何存储和显示-->
+
+<!--设置课程按钮-->
+<wux-cell title="课程" extra="{{ course }}" bind:click="onOpen"></wux-cell>
+<wux-cascader visible="{{ visible }}" default-value="{{ tag }}" title="课程" options="{{ instituteList }}" bind:close="onClose" bind:change="onChange" />
+
+<wux-cell title="类别" extra="{{ typeName }}" bind:click="Open_type" bind:change="ChangeType"/>
+<van-popup show="{{ show }}" position="bottom" overlay="{{ false }}" bind:click-overlay="Cancel" >
+<van-picker show-toolbar columns="{{columns}}" visible-item-count="4" bind:cancel="Cancel" bind:confirm="Onconfirm"/>
+</van-popup>
+
+<!-- 上传图片 -->
+<view class='picture'>上传图片</view>
+
+<view slot="footer">
+  <view class="box">
+    <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+      <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+      <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+    </view>
+    <view class="upload-img-btn" bindtap="chooseImg" wx:if="{{imgs.length<9}}">
+      <image src='/images/button/add.png'></image>
+    </view>
+  </view>
+</view>
+
+<!-- 上传文件 -->
+<view class='picture'>上传文件</view>
+<view slot="footer">
+  <view class="box">
+    <view class="file" wx:for="{{ file }}" wx:for-item="item" wx:key="*this">
+      <image src="/images/file/{{ item.postfix }}.png" mode="aspectFill" ></image>
+      <view class="delete-btn" data-index="{{index}}" catchtap="deletefile">删除</view>
+    </view>
+    <view class="upload-file-btn" bindtap="chooseFile"  wx:if="{{file.length < 3}}">
+      <image src='/images/file/file.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='fill'></view>
+<!--发表按钮-->
+<wux-button class='publish' block type="positive" bind:click="publish">发 表</wux-button>

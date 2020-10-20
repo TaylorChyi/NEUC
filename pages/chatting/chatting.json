@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wux-search-bar": "../../dist/search-bar/index",
+    "wux-segmented-control": "../../dist/segmented-control/index",
+    "wux-timeago": "../../dist/timeago/index"
+  }
+}

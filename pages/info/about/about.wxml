@@ -1,0 +1,11 @@
+<!--pages/about/about.wxml-->
+<view class='container'>
+  <view class="title">
+      <text>关于我们</text>
+  </view>
+  <image class='Logo' src='/images/NEUC.png'></image>
+  <view class="content">
+    <text>橘核四粒团队 \n QQ：464285791</text>
+  </view>
+</view>
+ 

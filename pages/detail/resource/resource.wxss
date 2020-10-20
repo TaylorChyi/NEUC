@@ -1,0 +1,242 @@
+/* pages/detail/resource/resource.wxss */
+.top
+{
+  border-bottom: 15rpx solid #F1F1F1;
+}
+
+.title
+{
+  width: 100%;
+  background-color: #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-text
+{
+  margin-top: 25rpx;
+  margin-bottom: 15rpx;
+  width: 90%;
+}
+
+.contentPanel
+{
+  border-bottom: 15rpx solid #F1F1F1;
+}
+
+.contentTop
+{
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 15rpx;
+}
+
+.user
+{
+  width: 620rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 20rpx;
+}
+
+.userImage
+{
+  height: 65rpx;
+  width: 65rpx;
+  border-radius: 65rpx;
+}
+
+.userName
+{
+  height: 45rpx;
+  font-weight: 500;
+  font-size: 35rpx;
+  margin-left: 10rpx;
+  color: rgb(9, 129, 228);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  max-width: 420rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.user text
+{
+  font-size: 35rpx;
+  margin-left: 20rpx;
+  color: rgb(9, 129, 228);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.coin
+{
+  font-size: 35rpx;
+  color: rgb(255, 196, 0);
+}
+
+.contentMid
+{
+  margin-left: 95rpx;
+  width: 620rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text
+{
+  font-size: 35rpx;
+  color: rgb(58, 58, 58);
+  word-break:break-all;
+
+  margin-top: 10rpx;
+}
+
+.pictureList
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 600rpx;
+  margin-top: 15rpx;
+  border-bottom: 5rpx solid #F1F1F1;
+}
+
+.picture
+{
+  height: 185rpx;
+  width: 185rpx;
+  margin-right: 15rpx;
+  margin-bottom: 15rpx;
+  border-radius: 10rpx;
+}
+
+.fileList
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 15rpx;
+}
+
+.file
+{
+  width: 200rpx;
+  margin-right: 10rpx;
+  margin-bottom: 15rpx;
+}
+
+.file image
+{
+  width: 190rpx;
+  height: 240rpx;
+}
+
+.file-text
+{
+  font-size: 28rpx;
+  color: rgb(112, 111, 111);
+
+  max-width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.contentBottom
+{
+  margin-left: 95rpx;
+  margin-bottom: 20rpx;
+  width: 620rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.time
+{
+  width: 500rpx;
+  margin-top: 10rpx;
+  font-size: 35rpx;
+  color: rgb(112, 112, 112);
+}
+
+.like
+{
+  display: flex;
+  flex-direction: row;
+  vertical-align: text-top;
+  text-align: center;
+}
+
+.like image
+{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.like-text
+{
+  text-align: center; /*设置文本水平居中*/
+  color:  rgb(112, 112, 112);
+}
+
+.delete
+{
+  font-size: 35rpx;
+  color: rgb(112, 111, 111);
+  text-decoration:underline;
+}
+
+.bottom
+{
+  height: 90rpx;
+  width: 100%;
+
+  position: fixed;
+  z-index: 1;
+  bottom: 0rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid #F1F1F1;
+}
+
+.fill
+{
+  height: 95rpx;
+}
+
+.input
+{
+  width: 75%;
+  height: 50rpx;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+  background-color: #F1F1F1;
+}
+
+.send-button
+{
+  width: 45rpx;
+  height: 45rpx;
+  margin-left: 30rpx;
+}
+
+.collect-button
+{
+  width: 45rpx;
+  height: 45rpx;
+  margin-left: 30rpx;
+}

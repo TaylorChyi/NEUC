@@ -1,0 +1,31 @@
+/* pages/about/about.wxss */
+.title{
+  font-size: 60rpx;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+page
+{
+  height: 100%;
+  background-color: #3f81c1;
+}
+
+.content{
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.container
+{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.Logo
+{
+  height: 400rpx;
+  width: 400rpx;
+  border-radius: 400rpx;
+}

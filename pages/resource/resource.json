@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "wux-search-bar": "../../dist/search-bar/index",
+    "wux-tabs": "../../dist/tabs/index",
+    "wux-tab": "../../dist/tab/index",
+    "wux-badge": "../../dist/badge/index",
+    "wux-card": "../../dist/card/index",
+    "wux-wing-blank": "../../dist/wing-blank/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-cascader": "../../dist/cascader/index"
+  }
+}

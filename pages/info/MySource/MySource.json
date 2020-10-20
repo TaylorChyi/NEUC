@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我的资源",
+  "usingComponents": {
+    "wux-tabs": "../../../dist/tabs/index",
+    "wux-tab": "../../../dist/tab/index",
+    "wux-badge": "../../../dist/badge/index",
+    "wux-card": "../../../dist/card/index",
+    "wux-wing-blank": "../../../dist/wing-blank/index",
+    "van-card": "../../../dist0/card/index"
+  }
+}

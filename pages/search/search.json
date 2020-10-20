@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wux-search-bar": "../../dist/search-bar/index",
+    "wux-timeago": "../../dist/timeago/index"
+  }
+}

@@ -1,0 +1,292 @@
+/* pages/MyCollect/MyCollect.wxss */
+.page{
+  height: 100%;
+  width: 100%;
+}
+.window{
+  padding-top: 80rpx;
+  height: 1134rpx;
+}
+.navigation{
+  position: fixed;
+  height: 80rpx;
+  z-index: 9999;
+  width: 100%;
+}
+.picture{
+  width: 100%;
+  height: 300rpx;
+}
+/* 总面板 */
+.panel
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 单元面板 */
+.item-panel
+{
+  width: 730rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  padding: 10rpx;
+}
+
+/* 标题 */
+.title
+{
+  width: 630rpx;
+  font-weight: 500;
+  font-size: 40rpx;
+  color: #000000;
+  margin-left: 25rpx;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 5rpx;
+  word-break:break-all;
+}
+
+/* 详情 */
+.content
+{
+  width: 630rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-left: 25rpx;
+  color: rgb(172, 172, 172);
+  word-break:break-all;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 单元面板-底部 */
+.bottom
+{
+  height: 50rpx;
+  margin-top: 30rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* 发表用户头像 */
+.user-image
+{
+  height: 45rpx;
+  width: 45rpx;
+  margin-left: 25rpx;
+  border-radius: 45rpx;
+}
+
+/* 发表用户昵称 */
+.user-name
+{
+  height: 45rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  color: rgb(9, 129, 228);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  max-width: 160rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+/* 发表内容标签 */
+.tag
+{
+  margin-left: 15rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  color: rgba(40, 132, 194, 0.8);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  max-width: 240rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+
+  background-color: rgba(186, 226, 253, 0.6);
+  border-radius: 18rpx;
+}
+
+/* 发表时间 */
+.time
+{
+  font-weight: 500;
+  font-size: 30rpx;
+  color: rgba(112, 111, 111, 0.9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* 回复 */
+.answer
+{
+  margin-left: 15rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  color: rgba(112, 111, 111, 0.9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.empty
+{
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+}
+
+.empty image
+{
+  height: 300rpx;
+  width: 366rpx;
+}
+
+.empty text
+{
+  font-size: 38rpx;
+  color: #bfbfbf;
+}
+
+.resourceItem
+{
+  width: 750rpx;
+
+  border-bottom: 1px solid #eee;
+  padding: 10rpx 0rpx;
+
+  margin-bottom: 10rpx;
+  border-top: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+
+  border-radius: 10rpx;
+}
+
+.topC
+{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+}
+
+.fileImage
+{
+  width: 64rpx;
+  height: 80rpx;
+}
+
+.filetitle
+{
+  width: 600rpx;
+  font-weight: 500;
+  font-size: 40rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  word-break:break-all;
+
+  border-bottom: 1px solid rgb(228, 228, 228);
+  
+  max-width: 600rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.midC
+{
+  margin-left: 30rpx;
+}
+
+
+.filecontent
+{
+  font-weight: 500;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-left: 15rpx;
+  color: rgb(172, 172, 172);
+  word-break:break-all;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  display: block;
+  display: -webkit-box;
+  max-width: 650rpx;
+  line-height: 1.4;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bottomC
+{
+  height: 50rpx;
+  width: 750rpx;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.user
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  width: 550rpx;
+}
+
+.userImage
+{
+  height: 45rpx;
+  width: 45rpx;
+  border-radius: 45rpx;
+}
+
+.userName
+{
+  height: 45rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  color: rgb(9, 129, 228);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  max-width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.filetime
+{
+  font-weight: 500;
+  font-size: 30rpx;
+  color: rgba(112, 111, 111, 0.9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+

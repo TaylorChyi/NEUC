@@ -1,0 +1,180 @@
+/* pages/resource/resource.wxss */
+.top
+{
+  width: 100%;
+  height: 88rpx;
+  position: fixed;
+  z-index: 9;
+}
+
+.bottom
+{
+  width: 100%;
+  height: 88rpx;
+
+  z-index: 1;
+}
+
+.empty
+{
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+}
+
+.empty image
+{
+  height: 300rpx;
+  width: 366rpx;
+}
+
+.empty text
+{
+  font-size: 38rpx;
+  color: #bfbfbf;
+}
+
+
+/* 发表按钮 */
+.publish-button
+{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 30rpx; 
+  right: 30rpx;
+  z-index: 1;
+}
+
+
+.resourceItem
+{
+  width: 750rpx;
+
+  border-bottom: 1px solid #eee;
+  padding: 10rpx 0rpx;
+
+  margin-bottom: 10rpx;
+  border-top: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+
+  border-radius: 10rpx;
+}
+
+.topC
+{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+}
+
+.fileImage
+{
+  width: 64rpx;
+  height: 80rpx;
+}
+
+.title
+{
+  width: 600rpx;
+  font-weight: 500;
+  font-size: 40rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  word-break:break-all;
+
+  border-bottom: 1px solid rgb(228, 228, 228);
+  
+  max-width: 600rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.midC
+{
+  margin-left: 30rpx;
+}
+
+
+.content
+{
+  font-weight: 500;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-left: 15rpx;
+  color: rgb(172, 172, 172);
+  word-break:break-all;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  display: block;
+  display: -webkit-box;
+  max-width: 650rpx;
+  line-height: 1.4;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bottomC
+{
+  height: 50rpx;
+  width: 750rpx;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.user
+{
+  width: 500rpx;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.userImage
+{
+  height: 45rpx;
+  width: 45rpx;
+  border-radius: 45rpx;
+}
+
+.userName
+{
+  height: 45rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  color: rgb(9, 129, 228);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+   max-width: 450rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.time
+{
+  margin-left: 20rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  color: rgba(112, 111, 111, 0.9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,0 +1,49 @@
+<!--pages/resource/resource.wxml-->
+
+<!--
+<view class='top' bindtap='toSearch'>
+
+</view>
+<view class='bottom'>
+  <wux-search-bar clear maxlength="8"/>
+</view>
+-->
+
+<!--发表按钮-->
+<image class='publish-button' src='/images/button/publish.png' bindtap='toPublish'/>
+
+<wux-cell title="课程" extra="{{ course }}" bind:click="onOpen"></wux-cell>
+<wux-cascader visible="{{ visible }}" default-value="{{ tag }}" title="课程" options="{{ instituteList }}" bind:close="onClose" bind:change="onChange" />
+
+
+<wux-tabs wux-class="bordered" controlled current="{{ current }}" bindchange="onTabsChange">
+  <view wx:for="{{ resourceList }}" wx:key="key">
+    <wux-tab key="{{ item.key }}" title="{{ item.title }}"></wux-tab>
+  </view>
+</wux-tabs>
+<view class="card" wx:for="{{ resourceList }}" wx:key="{{index}}">
+  <view hidden="{{index!=current}}">
+    <view wx:if="{{ item.content.length > 0}}" wx:for="{{ item.content }}" wx:key="{{index}}" wx:for-item="item1">
+      <view class='resourceItem' data-index="{{index}}" bindtap="toDetailResource">
+        <view class='topC'>
+          <image class='fileImage' src='/images/file/{{item1.fileList[0].postfix}}.png'></image>
+          <view class='title'>{{item1.title}}</view>
+        </view>
+        <view class='midC'>
+          <view class='content'>{{item1.content}}</view>
+        </view>
+        <view class='bottomC'>
+          <view class='user'>
+            <image class='userImage' src='{{item1.image}}'></image>
+            <view class='userName'>{{item1.name}}</view>
+          </view>
+          <view class='time'>{{item1.date}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="empty" wx:if="{{ item.content.length == 0}}">
+      <image src='/images/empty.png'></image>
+      <text>空空如也</text>
+    </view>
+  </view>
+</view>

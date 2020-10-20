@@ -1,0 +1,116 @@
+<!--pages/detail/resource/resource.wxml-->
+<wux-toast id="wux-toast" />
+<view class='top'>
+
+  <!--标题-->
+  <view class='title'>
+    <view class='title-text'>{{ resourceItem.title }}</view>
+  </view>
+
+  <!--内容面板-->
+  <view class='contentPanel'>
+
+    <!--内容面板顶部-->
+    <view class='contentTop'>
+      <view class='user'>
+        <!--用户头像-->
+        <image class='userImage' src='{{ resourceItem.image }}'/>
+        <!--用户昵称-->
+        <view class='userName'>{{ resourceItem.name }}</view>
+        <text>楼主</text>
+      </view>
+    </view>
+
+    <!--内容面板中部-发表内容-->
+    <view class='contentMid'>
+      <!--发表的文本-->
+      <view class='text'>
+        {{ resourceItem.content }}
+      </view>
+      <!--发表的图片-->
+      <view class='pictureList' wx:if="{{ resourceItem.imageList }}" >
+        <view wx:for="{{ resourceItem.imageList }}" wx:key="{{ index }}">
+          <image class='picture' wx:if="{{ item!=null }}" 
+          src='{{item}}'
+          bindtap='previewImage' data-index='{{index}}' mode="aspectFill"></image>
+        </view>
+      </view>
+      <!--发表的文件-->
+      <view class='fileList' wx:if="{{ resourceItem.fileList }}" >
+        <view wx:for="{{ resourceItem.fileList }}" wx:key="{{ index }}">
+          <view class='file' bindtap='downloadFile' data-index='{{index}}'>
+            <image wx:if="{{ item!=null }}" 
+            src='/images/file/{{ item.postfix }}.png '></image>
+            <view class='file-text'>{{item.showName}}</view>
+          </view>
+        </view>
+      </view>
+      <!--下载按钮-->
+      <view class='download'>
+      
+      </view>
+    </view>
+
+    <!--内容面板底部-->
+    <view class='contentBottom'>
+      <!--发表时间-->
+      <view class='time'>{{ resourceItem.date }}</view>
+      <!--回复按钮
+      <view class='answer'>回复：{{ resourceItem.answer.length }}</view>
+      -->
+      <!--点赞按钮-->
+      <view class='like' bindtap='like'>
+        <image src='/images/button/{{tempIsLike? "like1": "like0"}}.png'></image>
+        <view class='like-text'>({{ resourceItem.likeNum }})</view>
+      </view>
+      
+    </view>
+  </view>
+
+</view>
+
+<!--面板中部-->
+<view class='mid'>
+  <!--所有的回复  --><!--？是否需要考虑无回复时的状态-->
+  <view class='answerPanel' wx:for="{{ commentList }}" wx:key="{{index}}">
+    <!--单个回复-->
+    <view class='contentPanel'>
+      <!--回复面板顶部-->
+      <view class='contentTop'>
+        <view class='user'>
+          <!--用户头像 -->
+          <image class='userImage' src='{{ item.image }}'/>
+          <!--用户昵称 -->
+          <view class='userName'>{{ item.name }}</view>
+          <!--楼层 -->
+          <text>{{index + 1}}楼</text>
+        </view>
+
+        <!--删除按钮-->
+        <view class='delete' wx:if="{{ openid == resourceItem._openid || openid == item._openid}}" data-index="{{index}}" bindtap="answerDelete">删除</view>
+      </view>
+
+      <!--回复面板中部 -->
+      <view class='contentMid'>{{ item.content }}</view>
+
+      <!--回复面板底部-->
+      <view class='contentBottom'>
+        <!--回复时间 -->
+        <view class='time'>
+          <wux-timeago to="{{ item.date }}" lang="zh_CN" />
+        </view>
+        <!--点赞
+        <view class='like'>{{item.like.length}}</view>
+        -->
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='fill'></view>
+
+<view class='bottom'>
+  <input class='input' confirm-type='send' bindinput="onInput" placeholder='想对Ta说...'></input>
+  <image class='send-button' src='../../../images/button/send.png' bindtap='send'/>
+  <image class='collect-button' src='../../../images/button/{{tempIsCollection? "collected" : "collect"}}.png' bindtap='collect'/>
+</view>

@@ -1,0 +1,71 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/chatting/chatting",
+    "pages/welcome/welcome",
+    "pages/detail/discuss/discuss",
+    "pages/detail/resource/resource",
+    "pages/discuss/discuss",
+    "pages/discuss/publish/publish",
+    "pages/info/info",
+    "pages/info/FeedBack/FeedBack",
+    "pages/info/MyCollect/MyCollect",
+    "pages/info/MyMessage/MyMessage",
+    "pages/info/MyPublish/MyPublish",
+    "pages/info/about/about",
+    "pages/info/edit/edit",
+    "pages/resource/resource",
+    "pages/resource/publish/publish",
+    "pages/search/search",
+    "pages/radio/radio",
+    "pages/activity/activity"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3f81c1",
+    "navigationBarTitleText": "NEUC",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#3f81c1",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/radio/radio",
+        "iconPath": "images/button/resource0.png",
+        "selectedIconPath": "images/button/resource1.png",
+        "text": "电台"
+      },
+      {
+        "pagePath": "pages/chatting/chatting",
+        "iconPath": "images/button/resource0.png",
+        "selectedIconPath": "images/button/resource1.png",
+        "text": "聊天"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "iconPath": "images/button/resource0.png",
+        "selectedIconPath": "images/button/resource1.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/discuss/discuss",
+        "iconPath": "images/button/resource0.png",
+        "selectedIconPath": "images/button/resource1.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "iconPath": "images/button/resource0.png",
+        "selectedIconPath": "images/button/resource1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,41 @@
+<!--pages/edit/edit.wxml-->
+<view>
+  <wux-cell-group title="个人信息">
+    <wux-cell hover-class="none">
+      <wux-input label="昵称" value="{{name}}" controlled="true" bind:change="ChangeName"/>
+    </wux-cell>
+
+    <wux-cell title="年级" extra="{{ grade }}" bind:click="Open_grade" bind:change="ChangeGrade"/>
+    <wux-cell title="专业" extra="{{ majorName }}" bind:click="onOpen"/>
+
+  </wux-cell-group>
+  <van-toast id="van-toast" />
+  <wux-button class='confirm' size="large" block type="positive" bindtap="Confirm">保 存</wux-button>
+  
+
+  <van-popup
+  custom-style="width:75%"
+  overlay-style="background-color: rgba(0, 0, 0, 0)"
+  show="{{ show }}"
+  position="right"
+  bind:click-overlay="onClose"
+>
+<!--应该写成for循环更好；专业信息存储在数据库中-->
+    <view class="page__bd" wx:for="{{ instituteList }}" wx:key="{{index}}" >
+      <wux-radio-group name="{{ item.label }}" value="{{ major }}" title="{{ item.label }}" bind:change="onChange" >
+        <view wx:for="{{ item.children }}" wx:key="{{index}}" wx:for-item="item1">
+          <wux-radio color="positive" title="{{ item1.label }}" value="{{ item1.value }}" data-label="{{ item1.label }}"/>
+        </view>
+      </wux-radio-group>
+    </view>
+  </van-popup>
+
+  <van-popup
+  show="{{ grade_show }}"
+  position="bottom"
+  overlay="{{ false }}"
+  bind:click-overlay="Cancel"
+  >
+  <van-picker show-toolbar columns="{{columns}}" visible-item-count="4" bind:cancel="Cancel" bind:confirm="Onconfirm"/>
+  </van-popup>
+</view>

@@ -1,0 +1,106 @@
+/* pages/MyMessage/MyMessage.wxss */
+.unread{
+  color: #9A9C9B;
+  height: 60rpx;
+  padding: 10rpx 40rpx;
+  text-align: left;
+  width: 670rpx;
+}
+
+.unread text{
+  display: inline-block;
+  line-height: 60rpx;
+  font-size: 22rpx;
+}
+
+.unread image{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  float: right;
+}
+
+.notify-item{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 15rpx;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+
+.notify-content
+{
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.notify-image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+}
+
+.notify-title{
+  color: #818A8F;
+  font-size: 28rpx;
+  padding: 20rpx 0 8rpx 0;
+
+  word-break:break-all;
+  width: 570rpx;
+
+  max-width: 570rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.notify-name{
+  color: #464646;
+  font-size: 35rpx;
+  line-height: 34rpx;
+
+  
+  max-width: 570rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+.placehold{
+  padding: 80rpx 0;
+  font-size: 28rpx
+}
+.empty
+{
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+}
+
+.empty image
+{
+  height: 300rpx;
+  width: 366rpx;
+}
+
+.empty text
+{
+  font-size: 38rpx;
+  color: #bfbfbf;
+}
+
+.point
+{
+  width: 25rpx;
+  height: 25rpx;
+}

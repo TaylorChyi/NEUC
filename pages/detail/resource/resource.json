@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wux-timeago": "../../../dist/timeago/index",
+    "wux-toast": "../../../dist/toast/index"
+  }
+}

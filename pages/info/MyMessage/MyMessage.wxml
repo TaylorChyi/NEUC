@@ -1,0 +1,20 @@
+<!--pages/MyMessage/MyMessage.wxml-->
+<view class="unread">
+  <text>通知列表</text>
+  <image src="../../../images/message/allread.png"></image>
+</view>
+<view class="empty" wx:if="{{notifyList.length == 0}}">
+    <image src='/images/empty.png'></image>
+    <text>空空如也</text>
+</view>
+<view wx:for="{{notifyList}}" wx:key = "index" wx:if="{{notifyList.length>0}}">
+  <view class="notify-item" bindtap="toDetail" data-index='{{index}}'>
+    <image class="notify-image" src="{{item.sender_image}}"></image>
+    <view class="notify-content">
+      <view class="notify-name" wx:if="{{item.action=='回答'}}">{{item.sender_name}} 回复了问题</view>
+      <view class="notify-name" wx:if="{{item.action=='资源'}}">{{item.sender_name}} 评论了你的资源</view>
+      <view class="notify-title">{{item.content}}</view>
+    </view>
+    <image class='point' wx:if="{{!item.flagOfRead}}" src="../../../images/message/point.png"></image>
+  </view>
+</view>

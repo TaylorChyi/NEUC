@@ -1,0 +1,63 @@
+/**index.wxss**/
+page
+{
+  height: 100%;
+  background-color: #3f81c1;
+}
+
+.getUserinfo
+{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  bottom: 40rpx; 
+  right: 0rpx;
+  z-index: 1;
+
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  border: none; 
+}
+
+.usermotto
+{
+  height: 100rpx;
+  width: 270rpx;
+  margin-top: 200px;
+
+  background-color: #f7f7f7;
+  border-radius: 100rpx;
+  border: none; 
+}
+.usermotto text
+{
+  font-size: 40rpx;
+  color: #3f81c1;
+}
+
+button::after{ border: none; } 
+
+.container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  height: 200rpx;
+  width: 200rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #f7f7f7;
+}

@@ -1,0 +1,93 @@
+/* pages/moments/moments.wxss */
+
+/* 发表按钮 */
+.publish-button
+{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 30rpx; 
+  right: 30rpx;
+  z-index: 1;
+}
+
+/* 总面板 */
+
+
+/* 单元面板 */
+/* .item-panel
+{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  padding: 10rpx 0rpx;
+
+  margin-bottom: 10rpx;
+  border-top: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+
+  border-radius: 10rpx;
+} */
+
+
+
+/* 详情 */
+.user-content
+{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  color: dimgray;
+  word-break:break-all;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}
+
+
+
+.item-panel
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  padding: 20rpx;
+
+  border-bottom: 2px solid #eee;
+  border-top: 2px solid #eee;
+  box-shadow: 0 2px 2px #eeeeee;
+}
+
+/* 发表用户头像 */
+.user-image
+{
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 20rpx;
+
+  border-style: solid;
+  border-width: 4rpx;
+  border-color: gainsboro;
+}
+
+.right
+{
+  /* padding: 10rpx; */
+  padding-left: 20rpx;
+}
+
+/* 发表用户昵称 */
+.user-nickname
+{
+  color: rgb(9, 129, 228);
+  margin-top: 5rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
+}

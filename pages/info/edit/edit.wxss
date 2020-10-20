@@ -1,0 +1,10 @@
+/* pages/edit/edit.wxss */
+.confirm
+{
+  width: 100%;
+  height: 120rpx;
+
+  position: fixed;
+  z-index: 1;
+  bottom: 0rpx;
+}

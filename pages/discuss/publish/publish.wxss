@@ -1,0 +1,106 @@
+/* pages/resource/publish/publish.wxss */
+.publish
+{
+  width: 100%;
+  height: 110rpx;
+
+  position: fixed;
+  z-index: 1;
+  bottom: 0rpx;
+}
+
+.fill
+{
+  width: 100%;
+  height: 180rpx;
+}
+
+.picture
+{
+  font-size: 38rpx;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.box
+{
+  margin-left: 65rpx;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.img
+{
+  width: 200rpx;
+  height: 200rpx;
+  position: relative;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.img image
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.file
+{
+  width: 200rpx;
+  height: 254rpx;
+  position: relative;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.file image
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.delete-btn
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: rgba(0,0,0,.5);
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.upload-img-btn
+{
+  width: 200rpx;
+  height: 200rpx;  
+  border-width: 0 0 0 0;
+}
+
+.upload-img-btn image
+{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.upload-file-btn
+{
+  width: 200rpx;
+  height: 254rpx;  
+  border-width: 0 0 0 0;
+}
+
+.upload-file-btn image
+{
+  width: 200rpx;
+  height: 254rpx;
+}
